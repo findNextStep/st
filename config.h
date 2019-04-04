@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "DroidSansMono Nerd Font:size=15";
+static char *font = "DroidSansMono Nerd Font:size=12";
 static int borderpx = 2;
 
 /*
@@ -405,13 +405,13 @@ static Shortcut shortcuts[] = {
     { XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
     { TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
     { TERMMOD,              XK_Next,        zoom,           {.f = -1} },
-    { TERMMOD,              XK_j,           kscrolldown,    {.i = 1} },
-    { TERMMOD,              XK_k,           kscrollup,      {.i = 1} },
+    { TERMMOD,              XK_j,           kscrolldown,    {.i =  1} },
+    { TERMMOD,              XK_k,           kscrollup,      {.i =  1} },
     { TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
     { TERMMOD,              XK_c,           clipcopy,       {.i =  0} },
     { TERMMOD,              XK_v,           clippaste,      {.i =  0} },
     { TERMMOD,              XK_y,           selpaste,       {.i =  0} },
-    { TERMMOD,              XK_Escape,      keyboard_select, { 0 }     },
+    { TERMMOD,              XK_Escape,      keyboard_select,{ 0 }     },
     { ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
     { TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 };

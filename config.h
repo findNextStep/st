@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "DroidSansMono Nerd Font:size=12";
+static char *font = "DroidSansMono Nerd Font:size=15";
 static int borderpx = 2;
 
 /*
@@ -18,7 +18,7 @@ static int borderpx = 2;
  */
 static char *shell = "/bin/sh";
 char *utmp = NULL;
-char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
+char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400 -ixon";
 
 /* identification sequence returned in DA and DECID */
 char *vtiden = "\033[?6c";

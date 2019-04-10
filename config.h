@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "DroidSansMono Nerd Font:size=12";
+static char *font = "DroidSansMono Nerd Font:size=15";
 static int borderpx = 2;
 
 /*
@@ -389,8 +389,16 @@ static unsigned int defaultattr = 11;
  */
 static MouseShortcut mshortcuts[] = {
     /* button               mask            string */
-    { Button4,              XK_NO_MOD,     "\031" },
-    { Button5,              XK_NO_MOD,     "\005" },
+    // { Button4,              XK_NO_MOD,      "\031" },
+    // { Button5,              XK_NO_MOD,      "\005" },
+};
+
+MouseKey mkeys[] = {
+    /* button               mask            function        argument */
+    { Button4,              XK_NO_MOD,      kscrollup,      {.i =  1} },
+    { Button5,              XK_NO_MOD,      kscrolldown,    {.i =  1} },
+    { Button4,              ShiftMask,      zoom,           {.f =  1} },
+    { Button5,              ShiftMask,      zoom,           {.f = -1} },
 };
 
 /* Internal keyboard shortcuts. */
@@ -403,15 +411,15 @@ static Shortcut shortcuts[] = {
     { ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
     { ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
     { XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-    { ControlMask|ShiftMask,XK_J,           zoom,           {.f = +1} },
-    { ControlMask|ShiftMask,XK_K,           zoom,           {.f = -1} },
-    { ControlMask|ShiftMask,XK_space,       zoomreset,      {.f =  0} },
+    { ControlMask | ShiftMask, XK_J,           zoom,           {.f = +1} },
+    { ControlMask | ShiftMask, XK_K,           zoom,           {.f = -1} },
+    { ControlMask | ShiftMask, XK_space,       zoomreset,      {.f =  0} },
     { TERMMOD,              XK_j,           kscrolldown,    {.i =  1} },
     { TERMMOD,              XK_k,           kscrollup,      {.i =  1} },
     { TERMMOD,              XK_c,           clipcopy,       {.i =  0} },
     { TERMMOD,              XK_v,           clippaste,      {.i =  0} },
     { TERMMOD,              XK_y,           selpaste,       {.i =  0} },
-    { TERMMOD,              XK_Escape,      keyboard_select,{ 0 }     },
+    { TERMMOD,              XK_Escape,      keyboard_select, { 0 }     },
     { ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
     { TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 };

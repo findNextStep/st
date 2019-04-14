@@ -2880,3 +2880,12 @@ int trt_kbdselect(KeySym ksym, char *buf, int len) {
     quant = 0;
     return 0;
 }
+
+void input(const Arg*arg){
+    char * str = arg->v;
+    int i=0;
+    for (char* it = str; *it !='\0';++it){
+        i++;
+    }
+    ttywrite(str,i,0);
+}

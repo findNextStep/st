@@ -18,7 +18,7 @@ static int borderpx = 2;
  */
 static char *shell = "/bin/sh";
 char *utmp = NULL;
-char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400 -ixon";
+char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400 -ixon -ixoff";
 
 /* identification sequence returned in DA and DECID */
 char *vtiden = "\033[?6c";

@@ -2,3 +2,4 @@ st
 *.o
 .*
 !.gitignore
+compile_commands.json

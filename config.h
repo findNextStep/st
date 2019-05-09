@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "UbuntuMono Nerd Font:size=15";
+static char *font = "UbuntuMono Nerd Font:size=20";
 static int borderpx = 2;
 
 /*
@@ -362,7 +362,7 @@ static const char *colorname[] = {
  * foreground, background, cursor, reverse cursor
  */
 unsigned int defaultfg = 15;
-unsigned int defaultbg = 234;
+unsigned int defaultbg = 0;
 static unsigned int defaultcs = 231;
 static unsigned int defaultrcs = 2;
 

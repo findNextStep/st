@@ -3,3 +3,4 @@ st
 .*
 !.gitignore
 compile_commands.json
+build

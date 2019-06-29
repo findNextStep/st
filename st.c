@@ -2885,9 +2885,9 @@ int trt_kbdselect(KeySym ksym, char *buf, int len) {
 }
 
 void input(const Arg*arg){
-    char * str = arg->v;
+    const char * str = arg->v;
     int i=0;
-    for (char* it = str; *it !='\0';++it){
+    for (const char* it = str; *it !='\0';++it){
         i++;
     }
     ttywrite(str,i,0);
